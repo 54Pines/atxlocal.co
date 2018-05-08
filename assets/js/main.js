@@ -4,9 +4,18 @@
 
 $(document).ready(function() {
 
-    setTimeout(function() {
-        $('body').addClass('loaded');
-    }, 3000);
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
+
+    $('#localButton').on('click', function() {
+      $('#myModal').modal('hide');
+      $('body').addClass('loaded');
+    })
+
+    // setTimeout(function() {
+    //     $('body').addClass('loaded');
+    // }, 3000);
     // setTimeout(function() {
     //     $('.login').toggleClass('hide_me');
     //     $("body").addClass("locked");
@@ -155,7 +164,7 @@ $(window).resize(function() {
 
 
 /*===============================================================
-        Food Slider (Owl Carousel) 
+        Food Slider (Owl Carousel)
 =================================================================*/
 
 $("#foodSlide").owlCarousel({
@@ -171,7 +180,7 @@ $("#foodSlide").owlCarousel({
 
 
 /*===============================================================
-        Available GIftcard (Owl Carousel) 
+        Available GIftcard (Owl Carousel)
 =================================================================*/
 
 $(document).ready(function() {
